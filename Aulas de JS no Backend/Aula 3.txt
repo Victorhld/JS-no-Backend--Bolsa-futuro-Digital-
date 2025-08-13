@@ -1,0 +1,48 @@
+N1= prompt("digite sua nota Av1")
+N2= prompt("digite sua nota Av2") 
+N3= prompt("digite sua nota Av3")
+N4= prompt("digite sua nota Av4")
+N5= prompt("digite sua nota Av5") 
+
+Media = (parseInt(N1) + parseInt(N2) + parseInt(N3) + parseInt(N4) + parseInt(N5))/5 
+
+console.log('Sua media é ' + Media)
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+Fahrenheit= prompt("Qual a sua temperatura em °F (Fahrenheit) ? ")
+
+
+Convercao = (Fahrenheit -32) *5 / 9
+
+
+
+console.log('Sua Temperatura em ºC (Celsius)  é ' + Convercao.toFixed(2))
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+L1 = parseFloat(prompt("Digite o valor do primeiro cateto: "));
+L2 = parseFloat(prompt("Digite o valor do segundo cateto: "));
+
+x1 = L1 ** 2; //cateto 1 ao quadrado
+x2 = L2 ** 2; //cateto 2 ao quadrado
+
+H = Math.sqrt(x1 + x2); // raiz quadrada da soma
+
+alert("Hipotenusa = " + H)
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+Peso = parseFloat(prompt("Qual seu Peso: ? "));
+Altura = parseFloat(prompt("Qual sua  altura: ? "));
+
+IMC = Peso/(Altura)**2;
+
+
+console.log('seu IMC (Indice de Massa Corporal) é ' + IMC.toFixed(2))
