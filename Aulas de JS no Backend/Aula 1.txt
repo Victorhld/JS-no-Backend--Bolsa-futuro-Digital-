@@ -1,0 +1,27 @@
+console.Log("Olá Mundo!")
+
+nome = prompt("Qual o seu nome?")
+console.log("olá " + nome)
+
+nome1 = prompt("Primeiro Nome?") 
+nome2 = prompt("Segundo Nome?") 
+console.log("Olá " + nome1 + nome2)
+
+dado = prompt("Informe um dado: ")
+console.log("O dado informado é do tipo: " + typeof(dado)) 
+
+
+dado = prompt("Informe um dado: ")
+console.log("O dado informado é do tipo: " + typeof(dado)) 
+
+dado = prompt("Informe um dado: ")
+dado2 =Number(dado)
+console.log("O dado informado é do tipo: " + (dado)) 
+
+
+idade = 5
+console.log(++idade)
+
+idade = 10
+console.log(--idade)
+
