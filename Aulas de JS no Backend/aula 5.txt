@@ -1,0 +1,107 @@
+valor1= Number(prompt("digite um valor"));
+valor2= Number(prompt("digite outro numero"));
+
+valor1 = valor1 + valor2;
+valor2 = valor1 - valor2;
+
+valor1 = valor1 - valor2;
+
+
+console.log ("valor1: ",valor1);
+console.log ("valor2: ",valor2);
+
+----------------------------------------------------------------------------------------------------------
+
+valor1= parseInt(prompt("digite um valor"));
+valor2= parseInt(prompt("digite outro numero"));
+
+valor1 = valor1 + valor2;
+valor2 = valor1 - valor2;
+
+valor1 = valor1 - valor2;
+
+
+console.log ("valor1: ",valor1);
+console.log ("valor2: ",valor2);
+
+
+----------------------------------------------------------------------------------------------------------
+
+idade = 20
+
+if (idade >= 18) {
+console.log(" Você é maior de idade.")
+
+}
+
+----------------------------------------------------------------------------------------------------------
+
+
+idade = 15
+
+if (idade >= 18) {
+console.log(" Você é maior de idade.")
+
+} else {
+
+console.log ("você e menor de idade.")
+
+}
+
+----------------------------------------------------------------------------------------------------------
+
+nota = 6
+
+if (nota >= 9) {
+
+  console.log("Excelente!")
+} else if (nota >= 6) {
+
+  console.log("Aprovado!")
+}else {
+
+  console.log ("Reprovado.")
+}
+
+----------------------------------------------------------------------------------------------------------
+
+nota = 9
+
+if (nota >= 9) {
+
+  console.log("Excelente!")
+} else if (nota >= 6) {
+
+  console.log("Aprovado!")
+}else {
+
+  console.log ("Reprovado.")
+}
+
+----------------------------------------------------------------------------------------------------------
+dia = 2
+
+switch (dia) {
+  case 1:
+    nomeDia = "segunda"
+    break
+  case 2:
+  nomeDia = "Terça"
+    break
+    case 3:
+  nomeDia = "Quarta"
+    break
+    case 4:
+  nomeDia = "Quinta"
+    break
+    case 5:
+  nomeDia = "Sexta"
+    break
+    default:
+    nomeDia = "Dia inválido"
+}
+
+console.log(nomeDia)
+
+
+
