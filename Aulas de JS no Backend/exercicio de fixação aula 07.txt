@@ -1,0 +1,93 @@
+idade = 20
+
+if (idade >= 50) {
+
+console.log ("você pode tirar carteira de habilitação")
+} else if (idade <= 17) 
+console.log ("você não pode tirar carteira de habilitação")
+
+
+----------------------------------------------------------------------------------
+
+
+idade = 17
+
+if (idade >=18 ) {
+
+console.log("você pode tirar carteira de habilitação")
+} else {
+    console.log("Você não pode tirar carteira de habilitação")}
+if (idade ===17){
+        console.log("você ainda não pode tirar mas ano que vem ta selado mlk")}
+else{}
+
+
+
+----------------------------------------------------------------------------------
+
+numero1 = parseFloat(prompt("informe um numero para verificar se e par ou impar"))
+numero2 = numero1 %2
+if (numero2 ==0) {
+    console.log ("Este numero e Par")
+}
+else {
+    console.log ("Este numero e Impar")}
+
+
+----------------------------------------------------------------------------------
+
+numero1 = parseFloat(prompt("informe um numero para verificar se e par ou impar"))
+numero2 = numero1 %2
+if (numero2 ==0) {
+    console.log ("Este numero e Par")
+}
+else {
+    console.log ("Este numero e Impar")}
+
+
+----------------------------------------------------------------------------------
+
+mes=prompt("Digite o valor o mes: ")
+
+switch (mes) {
+    case "1":
+    nomeMes = "Janeiro"
+    break
+    case "2":
+    nomeMes = "Fevereiro"
+    break
+    case "3":
+    nomeMes = "Março"
+    break
+    case "4":
+    nomeMes = "Abril"
+    break
+    case "5":
+    nomeMes = "Maio"
+    break
+    case "6":
+    nomeMes = "Junho"
+    break
+    case "7":
+    nomeMes = "Julho"
+    break
+    case "8":
+    nomeMes = "Agosto"
+    break
+    case "9":
+    nomeMes = "Setembro"
+    break
+    case "10":
+    nomeMes = "Outrubro"
+    break
+    case "11":
+    nomeMes = "Novembro"
+    break
+    case "12":
+    nomeMes = "Dezembro"
+    break
+  default:
+    nomeMes = "Mes inválido"       
+}
+
+console.log(nomeMes)
