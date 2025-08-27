@@ -1,0 +1,39 @@
+
+//Faça um script que mostre a classificação de um filme conforme a faixa etária.
+idade =parseInt(prompt("Qual sua Idade ?"));
+
+if (idade < 12) {
+    console.log("Classificação: Livre!")
+
+} else if (idade >=12 && idade <=14) {
+    console.log("Classificação: 12+")
+
+} else if (idade >=15 && idade <=17) {
+    console.log("Classificação: 15+")
+
+} else if (idade >=18 ) {
+
+  console.log("Classificação: 18+")
+}
+
+
+--------------------------------------------------------------------
+
+valor1= parseInt(prompt("digite um numero"));
+valor2= parseInt(prompt("digite outro numero"));
+valor3= parseInt(prompt("digite outro numero novamente"));
+
+if (valor1 >= valor2 && valor1 >= valor3) {
+  alert("O maior número é: " + valor1);
+} else if (valor2 >= valor1 && valor2 >= valor3) {
+  alert("O maior número é: " + valor2);
+} else {
+  alert("O maior número é: " + valor3);
+}
+if (valor1 <= valor2 && valor1 <= valor3) {
+  alert("O menor número é: " + valor1);
+} else if (valor2 <= valor1 && valor2 <= valor3) {
+  alert("O menor número é: " + valor2);
+} else {
+  alert("O menor número é: " + valor3);
+}
