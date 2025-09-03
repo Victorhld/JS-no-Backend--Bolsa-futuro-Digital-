@@ -1,0 +1,94 @@
+contador = 1
+while (contador <= 5) {
+
+console.log ("Número " + contador)
+contador++          //incrementa para não gerar loop infinito
+
+
+}
+
+-------------------------------------------------------------------------------------------
+
+contador = 1
+
+while (true) {
+console.log ("Número " + contador)
+contador++ // incrementa para não gerar loop infinito
+
+if (contador > 5) {
+
+    break
+}
+
+}
+
+-----------------------------------------------------------------------------------------
+
+contador = 1 
+
+while (true) {
+
+contador++ // incrementa para não gerar loop infinito
+resto = contador%3
+if (resto == 0 ) {
+    console.log ("Pin!")
+}
+else {
+console.log ("Número " + contador)}
+if (contador > 25) {
+break
+}
+
+}
+
+----------------------------------------------------------------------------------------
+for (let numero=1; numero<=25; numero += 2){
+    console.log(numero);
+
+}
+
+---------------------------------------------------------------------------------------
+
+numero = 2
+contador = 1
+
+while (contador <=10) {
+    console.log(numero "+" contador + "=" (numero * contador )
+}
+
+---------------------------------------------------------------------------------------
+
+tabuada=parseInt(prompt("Qual tabuada você quer saber: ?"))
+for(cont = 1; cont <=10; cont++) {
+console.log (tabuada + " x " + cont + " = " + (tabuada * cont));
+
+
+}
+
+--------------------------------------------------------------------------------------
+
+let numero
+let pares = 0
+let impar = 0
+
+//numero=parseInt(prompt("informe um numero: ?"))
+while (true){ 
+numero =parseInt(prompt("Digite um número (0 para sair)"))
+if (numero == 0) {
+
+    break; 
+}
+if (numero % 2 == 0) {
+    pares++;
+} else
+ { impar ++
+
+
+}//fim do if else
+
+
+}//fim do while
+
+console.log (" foram lidos " + pares + "numero pares.")
+console.log (" foram lidos " + impar+ "numero impares.")
+	
