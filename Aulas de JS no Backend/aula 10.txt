@@ -1,94 +1,38 @@
-contador = 1
-while (contador <= 5) {
+const CE = parseFloat(prompt("Qual valor você Deseja aplicar ?"))
+const ME = parseInt (prompt ("Quantos meses você deseja aplicar este valor ?"))
+const taxaPorcentagem = parseFloat(prompt("Qual a taxa de juros mensal atual  em porcentagem % Ex: 1.25 para 1.25% ?")) 
+const TX = taxaPorcentagem / 100
 
-console.log ("Número " + contador)
-contador++          //incrementa para não gerar loop infinito
-
-
-}
-
--------------------------------------------------------------------------------------------
-
-contador = 1
-
-while (true) {
-console.log ("Número " + contador)
-contador++ // incrementa para não gerar loop infinito
-
-if (contador > 5) {
-
-    break
-}
+let VC =Number(CE)
+for (let C = 1; C <=ME; C++) {
+    VC = VC + (VC * TX)
 
 }
 
------------------------------------------------------------------------------------------
-
-contador = 1 
-
-while (true) {
-
-contador++ // incrementa para não gerar loop infinito
-resto = contador%3
-if (resto == 0 ) {
-    console.log ("Pin!")
-}
-else {
-console.log ("Número " + contador)}
-if (contador > 25) {
-break
-}
-
-}
-
-----------------------------------------------------------------------------------------
-for (let numero=1; numero<=25; numero += 2){
-    console.log(numero);
-
-}
-
----------------------------------------------------------------------------------------
-
-numero = 2
-contador = 1
-
-while (contador <=10) {
-    console.log(numero "+" contador + "=" (numero * contador )
-}
-
----------------------------------------------------------------------------------------
-
-tabuada=parseInt(prompt("Qual tabuada você quer saber: ?"))
-for(cont = 1; cont <=10; cont++) {
-console.log (tabuada + " x " + cont + " = " + (tabuada * cont));
+// Imprimir
+console.log ("valor Aplicado: R$" + CE.toFixed(2))
+console.log ("Meses Aplicado: " + ME)
+console.log ("Taxa de Juros Mensal: "+ taxaPorcentagem + "%")
+console.log ("Valor Investido + Juros: R$" + VC.toFixed(2))
 
 
-}
-
---------------------------------------------------------------------------------------
-
-let numero
-let pares = 0
-let impar = 0
-
-//numero=parseInt(prompt("informe um numero: ?"))
-while (true){ 
-numero =parseInt(prompt("Digite um número (0 para sair)"))
-if (numero == 0) {
-
-    break; 
-}
-if (numero % 2 == 0) {
-    pares++;
-} else
- { impar ++
+-------------------------------------------------------------------------------------------------------------------------------
 
 
-}//fim do if else
+let totalCompra = 0
+let valorProduto
 
+do {
+    valorProduto = parseFloat(prompt ("Digite o valor do produto (ou 0 para finalizar a compra):"))
+    totalCompra += valorProduto
 
-}//fim do while
+//if (!isNaN(valorProduto)){
+    totalcompra =+ valorProduto
+//}
 
-console.log (" foram lidos " + pares + "numero pares.")
-console.log (" foram lidos " + impar+ "numero impares.")
-	
+}while (valorProduto !== 0)
+  // imprime o valor de compra
+
+  console.log ("----------------")
+  console.log ("Total da compra: R$" + totalCompra.toFixed(2))
+  console.log ("----------------")
