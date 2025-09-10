@@ -1,0 +1,54 @@
+let numeros = []
+let soma = 0
+let media = 0
+
+for (let i = 0; i <5; i++) {
+  parseInt()
+  let numero = parseInt(prompt("informe um numero inteiro"))
+  numeros.push(numero)
+
+  soma = soma + numero
+}
+
+media = soma/ numeros.length
+
+console.log ("A Média dos números é: " + media)
+console.log ("Os Números informados foram: " + numeros)
+
+-------------------------------------------------------------------------------------------------------
+
+function escontrarMariorMenor(listaDeNumeros)
+{
+if (listaDeNumeros.length === 0) {
+  return "A lista está vazia."
+}
+let maior = listaDeNumeros[0]
+let menor = listaDeNumeros[0]
+
+for (let i = 1; i < listaDeNumeros.length;i++){
+  const numeroAtual = listaDeNumeros[i];
+  
+  if (numeroAtual > maior){
+    maior = numeroAtual
+  }
+  if (numeroAtual <menor) {
+    menor = numeroAtual
+  }
+}
+return { maior: maior, menor: menor}
+}
+const numerosDigitados = []
+const quantidade = parseInt(prompt("Quantos números você quer inserir ?"))
+
+for (let i = 0; i < quantidade; i++) {
+const numero = parseInt(prompt("Digite o numero:"))
+  numerosDigitados.push(numero)
+}
+const resultado =escontrarMariorMenor(numerosDigitados)
+
+if (typeof resultado === 'string') {
+alert(resultado)
+}
+else {
+  alert(´O maior número é: $ {resultado.maior}\n0 menor número é: $ {resultado.menor}´)
+}
