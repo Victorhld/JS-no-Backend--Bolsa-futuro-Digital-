@@ -1,0 +1,64 @@
+// Define um tipo complexo para os itens do cupom fiscal.
+// A propriedade 'descricao' é do tipo string, enquanto 'qtd' e 'valor' são do tipo number.
+type Item = {
+  descricao: string,
+  qtd: number,
+  valor: number
+}
+
+// A função do caixa é o bloco principal do programa, o que melhora a modularização.
+function simularCaixa(): void {
+  // A variável 'itens' é um array que armazena objetos do tipo 'Item', representando cada produto.
+  const itens: Array<Item> = [];
+  let totalCupom: number = 0;
+  let continuar: boolean = true; 
+
+  // Usa um laço `while` para permitir a entrada de vários produtos.
+  while (continuar) {
+    const descricao = prompt("Informe a descrição do produto (ou deixe em branco para finalizar):");
+
+    // Condição para parar o loop quando o usuário não informar a descrição.
+    if (!descricao) {
+      continuar = false;
+      continue; // Pula para a próxima iteração do loop, quebrando-o.
+    }
+
+    const valorStr = prompt(`Informe o valor de "${descricao}":`);
+    const qtdStr = prompt(`Informe a quantidade de "${descricao}":`);
+
+    // Converte os valores de string para number e lida com entradas inválidas.
+    const valor = parseFloat(valorStr.replace(",", ".")) || 0;
+    const qtd = parseFloat(qtdStr.replace(",", ".")) || 0;
+
+    // Cria um objeto do tipo 'Item' e o adiciona ao array de itens.
+    const item: Item = {
+      descricao: descricao,
+      qtd: qtd,
+      valor: valor
+    };
+    itens.push(item);
+    totalCupom += valor * qtd;
+  }
+
+  // Se houver itens, imprime o cupom fiscal.
+  if (itens.length > 0) {
+    console.log("CUPOM DA VENDA");
+    console.log("-------------------");
+    console.log("ITEM | DESCRICAO | QTD | VALOR | TOTAL");
+    console.log("-------------------");
+
+    // Itera sobre o array de itens para imprimir cada um.
+    itens.forEach((item, index) => {
+      const subtotal = item.qtd * item.valor;
+      console.log(`${index + 1} | ${item.descricao} | ${item.qtd.toFixed(3)} | ${item.valor.toFixed(2)} | ${subtotal.toFixed(2)}`);
+    });
+
+    console.log("-------------------");
+    console.log(`TOTAL R$ ${totalCupom.toFixed(2)}`);
+  } else {
+    console.log("Nenhum item foi adicionado à venda.");
+  }
+}
+
+// Chama a função para iniciar o programa.
+simularCaixa();
