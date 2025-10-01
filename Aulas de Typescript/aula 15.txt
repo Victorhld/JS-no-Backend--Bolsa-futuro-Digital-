@@ -1,0 +1,92 @@
+class Comida {
+        nome: string    = ""
+        energia: number = 0
+        constructor( nome: string, energia: number) {
+            this.nome = nome
+            this.energia = energia
+        }
+    }
+
+class Cachorro {
+nome: string = ""
+peso: string = ""
+cor: string = ""
+private energia: number = 100
+constructor (nome: string, cor: string){
+this.nome = nome
+this.cor = cor
+}
+emitirSom(): void {
+   if (this.energia >=30){
+    console.log("au-au")
+     this.energia -= 20
+     }
+}
+ouvirSom (som: string): void{
+    if (som == this.nome) {
+        this.emitirSom()
+    }
+}
+emitirSom2(): void {
+    if (this.energia >=30) {
+    console.log("AuuuuuuuuuuuuuuuuuUUUUU-ôôôôôô")
+     this.energia -= 20
+    }
+}
+ouvirSom2 (som: string): void{
+    if (som == this.nome) {
+        this.emitirSom()
+    }
+}
+
+comer(comida:Comida){
+    console.log(`${this.nome} comeu ${comida.nome}, ele recuperou $ {comida.energia}. voce tem ${this.energia}`)
+    this.energia += comida.energia
+    if(this.energia > 100) {
+        this.energia = 100
+    }
+}
+
+} //fim da classe Cachorro
+
+const cachorroArgos: Cachorro = new Cachorro ("Argos","Preto e branco")
+cachorroArgos.emitirSom2()
+
+ 
+
+----------------------------------------------------------------------------------------------------
+
+
+interface Carro {
+    partes: Array<string>
+    montar(): void
+}
+class CarroModeloA implements Carro {
+    partes: Array<string> = ["motor1.0","cambio_manual"]
+montar():void{
+console.log(this.partes.join("."))
+
+    } 
+}
+class CarroModeloB implements Carro {
+    partes: Array<string> = ["motor2.0","cambio_automatico"]
+
+    montar(): void{
+        console.log(this.partes.join(";"))
+    }
+}
+
+//let carroA: CarroModeloA = new CarroModeloA()
+//carroA.montar()
+
+//const carroX: Carro = new CarroModeloB()
+//carroX.montar()
+
+let carroA: CarroModeloA = new CarroModeloA()
+const carroB: CarroModeloB = new CarroModeloB()
+
+function montarCarros(carros:Array<Carro>){
+    carros.forEach((carro) => carro.montar())
+}
+
+montarCarros([carroA, carroB])
